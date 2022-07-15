@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label>
+        Nhập số xem có phải số đó nằm trong mảng không:
+        <input type="number" placeholder="Nhập giá trị" id="input">
+    </label>
+</div>
+<div id="result" onclick="result()">
+    <button>click</button>
+</div>
+<script>
+    function result() {
+        let a = Number(document.getElementById('input').value)
+        let mang = [1,2,3,4,5,6,7,8,9,10];
+        for (let i = 0; i < mang.length; i++) {
+            if (a === mang[i]) {
+                document.getElementById('result').innerHTML = a +' là giá trị trong mảng'
+            }else {
+                document.getElementById('result').innerHTML = a +' không là giá trị trong mảng'
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
